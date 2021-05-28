@@ -86,29 +86,29 @@ exports.getRobots = (req, res, next) => {
 
 exports.addRobots = (req, res, next) => {
   try {
-    if(req.body.name === ''){
-      const error = new Error('INVALID REQUEST MESSAGE');
+    if (req.body.name === "") {
+      const error = new Error("INVALID REQUEST MESSAGE");
       //BAD REQUEST
       error.status = 400;
       error.stack = null;
-      next(error)
-    } else{
+      next(error);
+    } else {
+      //body from the request
+      const robot = req.body;
+      //add a record to the database
+      db.get("robots")
+        //add record to the array
+        .push(robot)
+        //get access to the last element in the array
+        .last()
+        //assign id to the object
+        .assign({ id: Math.floor(Math.random() * 10).toString() })
+        .write();
 
-    //body from the request
-    const robot = req.body;
-    //add a record to the database
-    db.get("robots")
-      //add record to the array
-      .push(robot)
-      //get access to the last element in the array
-      .last()
-      //assign id to the object
-      .assign({ id: Math.floor(Math.random() * 10).toString() })
-      .write();
-
-    //send back the newly created record
-    res.status(201).send(robot);
-  } }catch (error) {
+      //send back the newly created record
+      res.status(201).send(robot);
+    }
+  } catch (error) {
     console.log(error);
     next(error);
   }
