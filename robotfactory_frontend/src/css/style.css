@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #6edae6;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* end of common styles */
+
+/* section 1 */
+
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--primary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+/* navbar */
+.div-navbar {
+  position: absolute;
+  top: 3rem;
+  right: 10rem;
+  z-index: 1;
+}
+
+.navbar-link {
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 3rem;
+  color: var(--black-color);
+  transition: transform 0.5s;
+}
+
+.navbar-link:hover {
+  transform: scale(1.5);
+  color: var(--black-color);
+  text-decoration: none;
+}
+/* end of navbar */
+
+/* banner */
+.section-1-banner {
+  flex-direction: column;
+  z-index:1;
+}
+
+.section-1-banner h1 {
+  font-size: 10rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.section-1-banner p {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin: 6rem 0 4rem 0;
+}
+
+.section-1-banner span {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.section-1-banner button{
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  clip-path: polygon(
+    50% 0%,
+    81% 5%,
+    100% 0,
+    100% 100%,
+    80% 95%,
+    50% 100%,
+    20% 95%,
+    0 100%,
+    0 0,
+    23% 5%
+  );
+  transition: clip-path 0.5s;
+}
+
+.section-1-banner button:hover {
+  clip-path: polygon(
+    40% 15%,
+    77% 15%,
+    100% 10%,
+    100% 90%,
+    75% 85%,
+    40% 85%,
+    30% 100%,
+    0 50%,
+    0 50%,
+    30% 0
+  );
+}
+/* end of banner */
+
+/* background image */
+
+.imageshow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.imageshow img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity 5s;
+}
+/*end of background image */
+
+/* end of section 1 */
+
+/* section 2 */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--primary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.section-2-banner{
+  flex-direction: column;
+  z-index: 1;
+}
+
+.section-2-banner h1{
+  font-size: 7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.section-2-banner input{
+    width: 100%;
+    height: 4rem;
+    margin: 3rem 0 3rem 0;
+    font-size: 2rem;
+}
+
+.section-2-banner button{
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.section-2-banner h2{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-2-banner li,
+.section-2-banner span {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+
+.section-2-banner .imageshow {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.imageshow img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  transition: opacity 5s;
+
+}
+
+
+/* end of section 2 */
+
+/* section 3 */
+.section-3 {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--primary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.section-3-banner{
+  z-index: 1;
+  border-radius: 2rem;
+  border: 3px outset rgb(170, 90, 133);
+  box-shadow: inset 5em 1em rgb(122, 241, 92);
+  padding: 1rem;
+}
+
+.section-3-banner h3{
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.section-3-banner p,
+.section-3-banner li{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+
+.section-3-banner button{
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0 1rem 3rem;
+  cursor: pointer;
+  background-color: rgb(170, 90, 133);
+
+}
+
+/* end of section 3 */
+
+/* responsive */
+
+
+@media (min-width:600px){
+  .section-1-banner h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .section-1-banner p {
+    text-align: center;
+  }
+
+  
+}
+
+
+@media (max-width: 600px) {
+
+  .div-navbar {
+  right: 4rem;
+}
+
+
+    .section-1-banner h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+    .section-1-banner p {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+
+
+}
+@media (min-width:280px) and (max-width:653px){
+
+
+    .section-1-banner h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .section-1-banner p{
+    margin: 3rem 0 2rem 0;
+  }
+
+  .section-1-banner span {
+    font-size: 2rem;
+  }
+
+}
+
+
+
+
+
+@media (min-width:320px) and (max-width:568px){
+
+.section-1-banner {
+  margin-top: 5rem;
+}
+
+    .section-1-banner p {
+      margin: 2rem 0 2rem 0;
+  }
+
+
+.section-1-banner span {
+  font-size: 1.8rem;
+}
+
+  .div-navbar {
+  right: 3rem;
+}
+
+
+}
+
+@media (max-width: 653px) {
+
+.section-2-banner h1{
+  font-size: 3rem;
+}
+
+.section-2-banner h2{
+ font-size: 2rem;
+}
+}
+
+@media (min-width:320px) and (max-width:568px){
+  .section-2-banner h1{
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:320px) and (max-width:568px){
+.section-3-banner {
+  margin-top: 15rem;
+}
+
+.section-3-banner button{
+  padding: 1rem 1rem;
+}
+
+.imageshow img {
+  height: 120vh;
+}
+}
+
+@media (min-width:280px) and (max-width:653px){
+.section-3-banner{
+  margin-top: 15rem;
+}
+
+.imageshow img {
+  height: 120vh;
+}
+
+.section-3-banner button{
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+}
+
+/* end of responsive */
